@@ -6,9 +6,6 @@ using Type::String;
 
 namespace Exception {
 	class MyException {
-	protected:
-		String m_Message;
-
 	public:
 		MyException(const String& message="Exception occured!!") : m_Message{message} {}
 
@@ -17,6 +14,9 @@ namespace Exception {
 		};
 
 		virtual ~MyException() = default;
+
+	protected:
+		String m_Message;
 	};
 
 	class InvalidDateException : public MyException {

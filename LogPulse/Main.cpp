@@ -18,7 +18,7 @@ int main() {
 	log.info("Fine!");
 	log.setDate(23, 9, 2022);
 	log.info("Hello", 2342, 2,3,3,535);
-	log.info("Hello", 2342, 2,3,3,535);
+	log.info("Hello", 2342, 2, 3, 3, 535, "avxc", 'c');
 	log.warn("Carefull!");
 	log.warn("Carefull!");
 }

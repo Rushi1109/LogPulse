@@ -24,7 +24,7 @@
     <ProjectGuid>{5fb69bc4-34db-4fc9-a31e-c06585fbd4b0}</ProjectGuid>
     <RootNamespace>LogProject</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>LogProject</ProjectName>
+    <ProjectName>LogPulse</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

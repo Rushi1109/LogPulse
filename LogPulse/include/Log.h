@@ -49,7 +49,7 @@ namespace Logging {
 	template<typename... Args>
 	void Log::warn(const String& message, Args&&... args) const {
 		if (m_LogLevel >= Level::LevelWarning) {
-			std::cout << m_Date.getStrDate() << ":[Warning] " << message << " ";
+			std::cout << m_Date.getStrDate() << ": [Warning] " << message << " ";
 		}
 		printArgs(args...);
 	}
@@ -57,7 +57,7 @@ namespace Logging {
 	template<typename... Args>
 	void Log::error(const String & message, Args&&... args) const {
 		if (m_LogLevel >= Level::LevelError) {
-			std::cout << m_Date.getStrDate() << ":[Error] " << message << " ";
+			std::cout << m_Date.getStrDate() << ": [Error] " << message << " ";
 		}
 		printArgs(args...);
 	}
@@ -65,7 +65,7 @@ namespace Logging {
 	template<typename... Args>
 	void Log::info(const String & message, Args&&... args) const {
 		if (m_LogLevel >= Level::LevelInfo) {
-			std::cout << m_Date.getStrDate() << ": [Info]: " << message << " ";
+			std::cout << m_Date.getStrDate() << ": [Info] " << message << " ";
 		}
 		printArgs(args...);
 	}
