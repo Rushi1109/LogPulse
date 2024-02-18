@@ -1,9 +1,7 @@
 #ifndef _date_h_
 #define _date_h_
 
-#include<iostream>
 #include "./String.h"
-using Type::String;
 
 namespace Utility {
 	class Date {
@@ -29,18 +27,20 @@ namespace Utility {
 		void setMonth(const int& mm);
 		void setYear(const int& yy);
 
-		String getStrDate() const;
 		void setDate(int, int, int);
 		Date& addYear(const int&);
 
+		Type::String getStrDate() const;
+
 	private:
+		Type::String computeStrDate() const;
+
+
 		int m_Day;
 		int m_Month;
 		int m_Year;
 		mutable bool m_IsCacheValid;
-		mutable String m_StrDate;
-
-		String computeStrDate() const;
+		mutable Type::String m_StrDate;
 
 		bool isLeapYear(const int&) const;
 		bool isDateValid(const int&, const int&, const int&) const;

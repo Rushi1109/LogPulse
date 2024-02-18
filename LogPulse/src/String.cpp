@@ -1,7 +1,9 @@
-#include "../include/String.h"
-using Type::String;
+#include<cstring>
 
+#include "../include/String.h"
 #include "../include/Exception.h"
+
+using Type::String;
 
 unsigned int String::getLength(const char* str) {		// working
 	auto m_Size{ 0U };
@@ -11,6 +13,12 @@ unsigned int String::getLength(const char* str) {		// working
 	}
 	
 	return m_Size;
+}
+
+const char* String::getRaw() const {
+	char* rawCharPointer = new char[m_Size + 1];
+	memcpy(rawCharPointer, m_Buffer.get(), m_Size + 1);
+	return rawCharPointer;
 }
 
 String::String() {			// working

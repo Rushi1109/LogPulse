@@ -2,9 +2,9 @@
 #define _exception_h_
 
 #include "String.h"
-using Type::String;
 
 namespace Exception {
+	using Type::String;
 	class MyException {
 	public:
 		MyException(const String& message="Exception occured!!") : m_Message{message} {}

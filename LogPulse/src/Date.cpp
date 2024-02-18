@@ -1,7 +1,11 @@
-#include "../include/Date.h"
-using Utility::Date;
+#include<iostream>
 
+#include "../include/String.h"
+#include "../include/Date.h"
 #include "../include/Exception.h"
+
+using Utility::Date;
+using Type::String;
 
 bool Date::isLeapYear(const int& yy) const {
 	return ((yy % 400) == 0) || ((yy % 4 == 0) && (yy % 100 != 0));
@@ -54,20 +58,6 @@ void Date::setYear(const int& yy) {
 	}
 }
 
-String Date::computeStrDate() const {
-	return (m_Day < 10 ? "0" : "") + String::toString(m_Day) + "/" + (m_Month < 10 ? "0" : "") + String::toString(m_Month) + "/" + String::toString(m_Year);
-}
-
-
-String Date::getStrDate() const {
-	if (!m_IsCacheValid) {
-		std::cout << "Cache not valid" << '\n';
-		m_StrDate = computeStrDate();
-		m_IsCacheValid = true;
-	}
-	return m_StrDate;
-}
-
 void Date::setDate(int dd, int mm, int yy) {
 	if (isDateValid(dd, mm, yy)) {
 		m_Day = dd;
@@ -80,3 +70,17 @@ Date& Date::addYear(const int& yy) {
 	m_Year += yy;
 	return *this;
 }
+
+String Date::getStrDate() const {
+	if (!m_IsCacheValid) {
+		m_StrDate = computeStrDate();
+		m_IsCacheValid = true;
+	}
+	return m_StrDate;
+}
+
+String Date::computeStrDate() const {
+	return (m_Day < 10 ? "0" : "") + String::toString(m_Day) + "/" + (m_Month < 10 ? "0" : "") + String::toString(m_Month) + "/" + String::toString(m_Year);
+}
+
+

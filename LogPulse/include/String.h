@@ -1,8 +1,7 @@
 #ifndef _string_h_
 #define _string_h_
 
-#include<iostream>
-#include<cstring>
+#include <iostream>
 
 namespace Type {
 	class String {
@@ -25,6 +24,8 @@ namespace Type {
 			return m_Size;
 		}
 
+		const char* getRaw() const;
+
 		char& operator[](unsigned int index) const;
 		
 		String& append(const String&);
@@ -39,10 +40,10 @@ namespace Type {
 		friend std::ostream& operator<<(std::ostream&, const String&);
 
 	private:
+		static unsigned int getLength(const char*);
+
 		std::unique_ptr<char[]> m_Buffer;
 		unsigned int m_Size;
-
-		static unsigned int getLength(const char*);
 	};
 }
 
