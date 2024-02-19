@@ -16,7 +16,8 @@ namespace Logging {
 			Debug, Info, Warning, Error, Critical
 		};
 
-		explicit Log() : m_LogLevel{ Log::Level::Warning }, m_Date{}, m_SinkToFile{ false } {};
+		explicit Log() : m_LogLevel{ Log::Level::Warning }, m_IsFileDumpOn{ false } {};
+		Log(const Level& level, const String& filename = "dump.log") : m_LogLevel{level}, m_Filename{filename}, m_IsFileDumpOn{true} {}
 
 		void setLogLevel(const Level& level) {
 			m_LogLevel = level;
@@ -26,11 +27,7 @@ namespace Logging {
 			return m_LogLevel;
 		}
 
-		void setDate(int dd, int mm, int yy) {
-			m_Date.setDate(dd, mm, yy);
-		}
-
-		void sinkToFile(const String& filename);
+		void dumpToFile(const String& filename);
 
 		template<typename... Args>
 		void critical(const String& message, Args&&... args) const;
@@ -60,9 +57,8 @@ namespace Logging {
 		static String getLevelString(const Level& level);
 
 		Level m_LogLevel;
-		Date m_Date;
 		String m_Filename;
-		bool m_SinkToFile;
+		bool m_IsFileDumpOn;
 		mutable std::ofstream m_OutStream;
 	};
 
@@ -103,14 +99,14 @@ namespace Logging {
 
 	template<typename... Args>
 	void Log::log(const Level& level, const String& message, Args&&... args) const {
-		if (m_SinkToFile) {
+		if (m_IsFileDumpOn) {
 			m_OutStream.open(m_Filename.getRaw(), std::ios::app);
 
 			if (m_OutStream) {
-				m_OutStream << m_Date.getStrDate() << ": [" << getLevelStringColored(level) << "]: " << message << " ";
+				m_OutStream << Utility::Date::getCurrentDate().getStrDate() << ": [" << getLevelString(level) << "]: " << message << " ";
 			}
 		}
-		std::cout << m_Date.getStrDate() << ": [" << getLevelString(level) << "]: " << message << " ";
+		std::cout << Utility::Date::getCurrentDate().getStrDate() << ": [" << getLevelStringColored(level) << "]: " << message << " ";
 		printArgs(std::forward<Args>(args)...);
 
 		if (m_OutStream.is_open()) {

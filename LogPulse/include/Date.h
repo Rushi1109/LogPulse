@@ -32,6 +32,8 @@ namespace Utility {
 
 		Type::String getStrDate() const;
 
+		static Date& getCurrentDate();
+
 	private:
 		Type::String computeStrDate() const;
 

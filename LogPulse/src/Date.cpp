@@ -83,4 +83,7 @@ String Date::computeStrDate() const {
 	return (m_Day < 10 ? "0" : "") + String::toString(m_Day) + "/" + (m_Month < 10 ? "0" : "") + String::toString(m_Month) + "/" + String::toString(m_Year);
 }
 
-
+Date& Date::getCurrentDate() {
+	static Date date{ 19, 02, 2024 };
+	return date;
+}

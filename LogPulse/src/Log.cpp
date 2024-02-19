@@ -9,8 +9,8 @@ const String cyan("\033[0;36m");
 const String magenta("\033[0;35m");
 const String reset("\033[0m");
 
-void Log::sinkToFile(const String& filename) {
-	m_SinkToFile = true;
+void Log::dumpToFile(const String& filename) {
+	m_IsFileDumpOn = true;
 	m_Filename = filename;
 }
 
