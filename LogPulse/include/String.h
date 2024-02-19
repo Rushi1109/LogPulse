@@ -26,6 +26,7 @@ namespace Type {
 
 		const char* getRaw() const;
 
+		char& at(unsigned int index) const;
 		char& operator[](unsigned int index) const;
 		
 		String& append(const String&);

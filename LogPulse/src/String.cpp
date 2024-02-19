@@ -74,10 +74,14 @@ String& String::operator=(String&& str) noexcept {		// working
 	return *this;
 }
 
-char& String::operator[](unsigned int index) const {
+char& String::at(unsigned int index) const {
 	if (index < 0 || index >= m_Size) {
 		throw Exception::IndexOutOfBoundException("String index " + toString(index) + " is invalid");
 	}
+	return m_Buffer.get()[index];
+}
+
+char& String::operator[](unsigned int index) const {
 	return m_Buffer.get()[index];
 }
 

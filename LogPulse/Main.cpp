@@ -8,7 +8,7 @@ int main() {
 	using Utility::Date;
 	Log log;
 
-	log.sinkToFile("./logs/dump.log");
+	// log.sinkToFile("./logs/dump.log");
 	log.setLogLevel(Log::Level::Debug);
 	log.setDate(30, 01, 2024);
 	log.error("Stop!");

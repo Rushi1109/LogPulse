@@ -56,6 +56,7 @@ namespace Logging {
 		template<typename... Args>
 		void log(const Level& level, const String& message, Args&&... args) const;
 
+		static String getLevelStringColored(const Level& level);
 		static String getLevelString(const Level& level);
 
 		Level m_LogLevel;
@@ -106,7 +107,7 @@ namespace Logging {
 			m_OutStream.open(m_Filename.getRaw(), std::ios::app);
 
 			if (m_OutStream) {
-				m_OutStream << m_Date.getStrDate() << ": [" << getLevelString(level) << "]: " << message << " ";
+				m_OutStream << m_Date.getStrDate() << ": [" << getLevelStringColored(level) << "]: " << message << " ";
 			}
 		}
 		std::cout << m_Date.getStrDate() << ": [" << getLevelString(level) << "]: " << message << " ";
