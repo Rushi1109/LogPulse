@@ -1,6 +1,6 @@
 // EMPTY FOR NOW
 #include "../include/Log.h"
-using Logging::Log;
+using LogPulse::Log;
 
 const String red("\033[0;31m");
 const String darkRed("\033[1;31m");

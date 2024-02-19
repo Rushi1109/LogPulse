@@ -1,22 +1,31 @@
-#include "./include/Log.h"
 #include "./include/Date.h"
 #include "./include/String.h"
 #include "./include/Exception.h"
+#include "./include/LogPulse.h"
+#include<thread>
 
 int main() {
-	using Logging::Log;
+	using LogPulse::Log;
 	using Utility::Date;
-	Log log;
+	using LogPulse::Level;
+
+	Log log("MyLogger");
+
+	LogPulse::getDefaultLogger()->warn("Debug!!");
+	LogPulse::critical("Dead");
+	LogPulse::info("Fine!");
+	LogPulse::info("Info", std::this_thread::get_id());
+	LogPulse::info("Info", std::this_thread::get_id(), 535, "avxc", 'c');
 
 	log.dumpToFile("./logs/dump.log");
-	log.setLogLevel(Log::Level::Debug);
+	// log.setLogLevel(Level::Debug);
 	log.error("Stop!");
 	log.warn("Carefull!");
 	log.critical("Dead");
 	log.info("Fine!");
-	log.info("Hello", 2342, 2,3,3,535);
-	log.info("Hello", 2342, 2, 3, 3, 535, "avxc", 'c');
+	log.info("Info", std::this_thread::get_id());
+	log.info("Info", std::this_thread::get_id(), 535, "avxc", 'c');
 	log.warn("Carefull!");
 	log.debug("Debug");
-	log.warn("Carefull!");
+	log.warn("Warning!");
 }
