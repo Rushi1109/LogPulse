@@ -1,38 +1,42 @@
-#include "Log.h"
+#ifndef _LogPulse_h_
+#define _LogPulse_h_
+
+#include "./Log.h"
+#include "./Registry.h"
 
 namespace LogPulse {
-	auto defaultLogger = std::make_shared<Log>("DefaultLogger", Level::Debug, "./logs/default.log");
-
-	std::shared_ptr<Log> getDefaultLogger() {
-		return defaultLogger;
+	inline std::shared_ptr<Log> getDefaultLogger() {
+		return Registry::instance().getDefaultLogger();
 	}
 
-	void setDefaultLogger(std::shared_ptr<Log> logPtr) {
-		defaultLogger = logPtr;
+	inline void setDefaultLogger(std::shared_ptr<Log> logPtr) {
+		Registry::instance().setDefaulatLogger(logPtr);
 	}
 
 	template<typename... Args>
 	void critical(const string& message, Args&&... args) {
-		defaultLogger->critical(message, args...);
+		Registry::instance().getDefaultLogger()->critical(message, args...);
 	}
 
 	template<typename... Args>
 	void error(const string& message, Args&&... args) {
-		defaultLogger->error(message, args...);
+		Registry::instance().getDefaultLogger()->error(message, args...);
 	}
 
 	template<typename... Args>
 	void warn(const string& message, Args&&... args) {
-		defaultLogger->warn(message, args...);
-	}
-
-	template<typename... Args>
-	void debug(const string& message, Args&&... args) {
-		defaultLogger->debug(message, args...);
+		Registry::instance().getDefaultLogger()->warn(message, args...);
 	}
 
 	template<typename... Args>
 	void info(const string& message, Args&&... args) {
-		defaultLogger->info(message, args...);
+		Registry::instance().getDefaultLogger()->info(message, args...);
+	}
+
+	template<typename... Args>
+	void debug(const string& message, Args&&... args) {
+		Registry::instance().getDefaultLogger()->debug(message, args...);
 	}
 }
+
+#endif

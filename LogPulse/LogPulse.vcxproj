@@ -155,14 +155,17 @@
     <ClCompile Include="src\Date.cpp" />
     <ClCompile Include="src\Log.cpp" />
     <ClCompile Include="Main.cpp" />
-    <ClCompile Include="src\String.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\Date.h" />
     <ClInclude Include="include\LogPulse.h" />
     <ClInclude Include="include\Exception.h" />
     <ClInclude Include="include\Log.h" />
-    <ClInclude Include="include\String.h" />
+    <ClInclude Include="include\Registry.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="logs\default.log" />
+    <Text Include="logs\dump.log" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

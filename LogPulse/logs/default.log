@@ -1,40 +1,21 @@
-19/02/2024: [DefaultLogger] [Warning]: Debug!! 
-19/02/2024: [DefaultLogger] [Warning]: Debug!! 
-19/02/2024: [DefaultLogger] [Warning]: Debug!! 
-19/02/2024: [DefaultLogger] [Warning]: Debug!! 
-19/02/2024: [DefaultLogger] [Warning]: Debug!! 
-19/02/2024: [DefaultLogger] [Warning]: Debug!! 
-19/02/2024: [DefaultLogger] [Critical]: Dead 
-19/02/2024: [DefaultLogger] [Info]: Fine! 
-19/02/2024: [DefaultLogger] [Info]: Info 16688 
-19/02/2024: [DefaultLogger] [Info]: Info 16688 535 avxc c 
-19/02/2024: [DefaultLogger] [Warning]: Debug!! 
-19/02/2024: [DefaultLogger] [Critical]: Dead 
-19/02/2024: [DefaultLogger] [Info]: Fine! 
-19/02/2024: [DefaultLogger] [Info]: Info 24364 
-19/02/2024: [DefaultLogger] [Info]: Info 24364 535 avxc c 
-19/02/2024: [DefaultLogger] [Warning]: Debug!! 
-19/02/2024: [DefaultLogger] [Critical]: Dead 
-19/02/2024: [DefaultLogger] [Info]: Fine! 
-19/02/2024: [DefaultLogger] [Info]: Info 25192 
-19/02/2024: [DefaultLogger] [Info]: Info 25192 535 avxc c 
-19/02/2024: [DefaultLogger] [Warning]: Debug!! 
-19/02/2024: [DefaultLogger] [Critical]: Dead 
-19/02/2024: [DefaultLogger] [Info]: Fine! 
-19/02/2024: [DefaultLogger] [Info]: Info 12528 
-19/02/2024: [DefaultLogger] [Info]: Info 12528 535 avxc c 
-19/02/2024: [DefaultLogger] [Warning]: Debug!! 
-19/02/2024: [DefaultLogger] [Critical]: Dead 
-19/02/2024: [DefaultLogger] [Info]: Fine! 
-19/02/2024: [DefaultLogger] [Info]: Info 18024 
-19/02/2024: [DefaultLogger] [Info]: Info 18024 535 avxc c 
-19/02/2024: [DefaultLogger] [Warning]: Debug!! 
-19/02/2024: [DefaultLogger] [Critical]: Dead 
-19/02/2024: [DefaultLogger] [Info]: Fine! 
-19/02/2024: [DefaultLogger] [Info]: Info 9268 
-19/02/2024: [DefaultLogger] [Info]: Info 9268 535 avxc c 
 20/02/2024: [DefaultLogger] [Warning]: Debug!! 
 20/02/2024: [DefaultLogger] [Critical]: Dead 
-20/02/2024: [DefaultLogger] [Info]: Fine! 
-20/02/2024: [DefaultLogger] [Info]: Info 16552 
-20/02/2024: [DefaultLogger] [Info]: Info 16552 535 avxc c 
+20/02/2024: [DefaultLogger] [Debug]: Fine! 
+20/02/2024: [DefaultLogger] [Info]: Info 23056 
+20/02/2024: [DefaultLogger] [Error]: Info 23056 535 avxc c 
+20/02/2024: [DefaultLogger] [Warning]: Debug!! 
+20/02/2024: [DefaultLogger] [Critical]: Dead 
+20/02/2024: [DefaultLogger] [Debug]: Fine! 
+20/02/2024: [DefaultLogger] [Info]: Info 23016 
+20/02/2024: [DefaultLogger] [Error]: Info 23016 535 avxc c 
+20/02/2024: [MyLogger] [Error]: Stop! 
+20/02/2024: [MyLogger] [Warning]: Carefull! 
+20/02/2024: [MyLogger] [Critical]: Dead 
+20/02/2024: [MyLogger] [Debug]: Fine! 
+20/02/2024: [MyLogger] [Info]: Info 23016 
+20/02/2024: [MyLogger] [Info]: Info 23016 535 avxc c 
+20/02/2024: [DefaultLogger] [Warning]: Debug!! 
+20/02/2024: [DefaultLogger] [Critical]: Dead 
+20/02/2024: [DefaultLogger] [Debug]: Fine! 
+20/02/2024: [DefaultLogger] [Info]: Info 17728 
+20/02/2024: [DefaultLogger] [Error]: Info 17728 535 avxc c 

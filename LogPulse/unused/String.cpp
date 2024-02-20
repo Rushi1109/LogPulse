@@ -1,6 +1,6 @@
 #include<cstring>
 
-#include "../include/String.h"
+#include "./String.h"
 #include "../include/Exception.h"
 
 using Type::String;

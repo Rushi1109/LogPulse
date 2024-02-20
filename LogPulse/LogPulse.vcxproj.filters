@@ -24,9 +24,6 @@
     <ClCompile Include="src\Date.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\String.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\Log.h">
@@ -35,14 +32,18 @@
     <ClInclude Include="include\Date.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\String.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="include\Exception.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\LogPulse.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="include\Registry.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="logs\default.log" />
+    <Text Include="logs\dump.log" />
   </ItemGroup>
 </Project>
