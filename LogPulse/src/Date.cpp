@@ -1,11 +1,8 @@
 #include<iostream>
-
-#include "../include/String.h"
 #include "../include/Date.h"
 #include "../include/Exception.h"
 
 using Utility::Date;
-using Type::String;
 
 bool Date::isLeapYear(const int& yy) const {
 	return ((yy % 400) == 0) || ((yy % 4 == 0) && (yy % 100 != 0));
@@ -13,25 +10,25 @@ bool Date::isLeapYear(const int& yy) const {
 
 bool Date::isDateValid(const int& dd, const int& mm, const int& yy) const {
 	if (yy < 1) {
-		throw Exception::InvalidDateException{ "Year " + String::toString(yy) + " is invalid" };
+		throw Exception::InvalidDateException{ "Year " + std::to_string(yy) + " is invalid" };
 	};
 	if (mm < 1 || mm > 12) {
-		throw Exception::InvalidDateException{ "Month " + String::toString(mm) + " is invalid" };
+		throw Exception::InvalidDateException{ "Month " + std::to_string(mm) + " is invalid" };
 	};
 	if (dd < 1 || dd > 31) {
-		throw Exception::InvalidDateException{ "Day " + String::toString(dd) + " is invalid" };
+		throw Exception::InvalidDateException{ "Day " + std::to_string(dd) + " is invalid" };
 	};
 
 	if (mm == 2) {
 		if (isLeapYear(yy)) {
-			if (dd > 29) throw Exception::InvalidDateException{ "Day " + String::toString(dd) + " is invalid" };
+			if (dd > 29) throw Exception::InvalidDateException{ "Day " + std::to_string(dd) + " is invalid" };
 		}
 		else {
-			if (dd > 28) throw Exception::InvalidDateException{ "Day " + String::toString(dd) + " is invalid" };
+			if (dd > 28) throw Exception::InvalidDateException{ "Day " + std::to_string(dd) + " is invalid" };
 		}
 	}
 	else if (mm == 4 || mm == 6 || mm == 9 || mm == 11) {
-		if (dd > 30) throw Exception::InvalidDateException{ "Day " + String::toString(dd) + " is invalid" };
+		if (dd > 30) throw Exception::InvalidDateException{ "Day " + std::to_string(dd) + " is invalid" };
 	};
 
 	return true;
@@ -71,7 +68,7 @@ Date& Date::addYear(const int& yy) {
 	return *this;
 }
 
-String Date::getStrDate() const {
+std::string Date::getStrDate() const {
 	if (!m_IsCacheValid) {
 		m_StrDate = computeStrDate();
 		m_IsCacheValid = true;
@@ -79,11 +76,11 @@ String Date::getStrDate() const {
 	return m_StrDate;
 }
 
-String Date::computeStrDate() const {
-	return (m_Day < 10 ? "0" : "") + String::toString(m_Day) + "/" + (m_Month < 10 ? "0" : "") + String::toString(m_Month) + "/" + String::toString(m_Year);
+std::string Date::computeStrDate() const {
+	return (m_Day < 10 ? "0" : "") + std::to_string(m_Day) + "/" + (m_Month < 10 ? "0" : "") + std::to_string(m_Month) + "/" + std::to_string(m_Year);
 }
 
 Date& Date::getCurrentDate() {
-	static Date date{ 19, 02, 2024 };
+	static Date date{ 20, 02, 2024 };
 	return date;
 }

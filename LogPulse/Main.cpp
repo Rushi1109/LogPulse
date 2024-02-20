@@ -1,5 +1,5 @@
 #include "./include/Date.h"
-#include "./include/String.h"
+#include <string>
 #include "./include/Exception.h"
 #include "./include/LogPulse.h"
 #include<thread>

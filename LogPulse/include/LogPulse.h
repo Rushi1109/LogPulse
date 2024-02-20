@@ -12,27 +12,27 @@ namespace LogPulse {
 	}
 
 	template<typename... Args>
-	void critical(const String& message, Args&&... args) {
+	void critical(const string& message, Args&&... args) {
 		defaultLogger->critical(message, args...);
 	}
 
 	template<typename... Args>
-	void error(const String& message, Args&&... args) {
+	void error(const string& message, Args&&... args) {
 		defaultLogger->error(message, args...);
 	}
 
 	template<typename... Args>
-	void warn(const String& message, Args&&... args) {
+	void warn(const string& message, Args&&... args) {
 		defaultLogger->warn(message, args...);
 	}
 
 	template<typename... Args>
-	void debug(const String& message, Args&&... args) {
+	void debug(const string& message, Args&&... args) {
 		defaultLogger->debug(message, args...);
 	}
 
 	template<typename... Args>
-	void info(const String& message, Args&&... args) {
+	void info(const string& message, Args&&... args) {
 		defaultLogger->info(message, args...);
 	}
 }

@@ -76,7 +76,7 @@ String& String::operator=(String&& str) noexcept {		// working
 
 char& String::at(unsigned int index) const {
 	if (index < 0 || index >= m_Size) {
-		throw Exception::IndexOutOfBoundException("String index " + toString(index) + " is invalid");
+		throw Exception::IndexOutOfBoundException("String index " + std::to_string(index) + " is invalid");
 	}
 	return m_Buffer.get()[index];
 }

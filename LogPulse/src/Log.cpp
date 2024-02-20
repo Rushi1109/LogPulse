@@ -2,20 +2,20 @@
 #include "../include/Log.h"
 using LogPulse::Log;
 
-const String red("\033[0;31m");
-const String darkRed("\033[1;31m");
-const String yellow("\033[1;33m");
-const String cyan("\033[0;36m");
-const String magenta("\033[0;35m");
-const String reset("\033[0m");
+const string red("\033[0;31m");
+const string darkRed("\033[1;31m");
+const string yellow("\033[1;33m");
+const string cyan("\033[0;36m");
+const string magenta("\033[0;35m");
+const string reset("\033[0m");
 
-void Log::dumpToFile(const String& filename) {
+void Log::dumpToFile(const string& filename) {
 	m_IsFileDumpOn = true;
 	m_Filename = filename;
 }
 
-String Log::getLevelStringColored(const Level& level) {
-	String strLevel;
+string Log::getLevelStringColored(const Level& level) {
+	string strLevel;
 	
 	switch (level) {
 		case Level::Critical : 
@@ -42,8 +42,8 @@ String Log::getLevelStringColored(const Level& level) {
 	return strLevel;
 }
 
-String Log::getLevelString(const Level& level) {
-	String strLevel;
+string Log::getLevelString(const Level& level) {
+	string strLevel;
 
 	switch (level) {
 	case Level::Critical:
