@@ -1,13 +1,14 @@
 #ifndef _log_h_
 #define _log_h_
 
-#include "./Date.h"
-#include <string>
 
+#include <string>
 #include <fstream>
 #include <iostream>
+#include <chrono>
+#include <ctime>
+#include <iomanip>
 using std::string;
-using Utility::Date;
 
 namespace LogPulse {
 	enum class Level {
@@ -65,14 +66,19 @@ namespace LogPulse {
 
 	template<typename... Args>
 	void Log::log(const Level& level, const string& message, Args&&... args) const {
+		auto time_t = std::chrono::system_clock::to_time_t(std::chrono::system_clock::now());
+		std::tm currentTime;
+		localtime_s(&currentTime, &time_t);
+
+
 		if (m_IsFileDumpOn) {
 			m_OutStream.open(m_Filename, std::ios::app);
 
 			if (m_OutStream) {
-				m_OutStream << Utility::Date::getCurrentDate().getStrDate() << ": [" << m_Name << "] [" << getLevelString(level) << "]: " << message << " ";
+				m_OutStream << std::put_time(&currentTime, "%e/%m/%y %T") << " : [" << m_Name << "] [" << getLevelString(level) << "]: " << message << " ";
 			}
 		}
-		std::cout << Utility::Date::getCurrentDate().getStrDate() << ": [" << m_Name << "] [" << getLevelStringColored(level) << "] : " << message << " ";
+		std::cout << std::put_time(&currentTime, "%e/%m/%y %T") << " : [" << m_Name << "] [" << getLevelStringColored(level) << "] : " << message << " ";
 		printArgs(std::forward<Args>(args)...);
 
 		if (m_OutStream.is_open()) {

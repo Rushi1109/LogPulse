@@ -1,5 +1,3 @@
-#include "./include/Date.h"
-#include "./include/Exception.h"
 #include "./include/LogPulse.h"
 #include<thread>
 

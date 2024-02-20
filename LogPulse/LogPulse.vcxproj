@@ -152,14 +152,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src\Date.cpp" />
     <ClCompile Include="src\Log.cpp" />
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\Date.h" />
     <ClInclude Include="include\LogPulse.h" />
-    <ClInclude Include="include\Exception.h" />
     <ClInclude Include="include\Log.h" />
     <ClInclude Include="include\Registry.h" />
   </ItemGroup>
