@@ -16,6 +16,15 @@ namespace Util {
 			std::cout << ms.count() << "ms\n";
 		}
 
+		static std::string getCurrentTimeString() {
+			auto currentTime = std::chrono::system_clock::to_time_t(std::chrono::system_clock::now());
+			std::tm timeBuffer;
+			localtime_s(&timeBuffer, &currentTime);
+			char buffer[18];
+			strftime(buffer, sizeof(buffer), "%d/%m/%y %H:%M:%S", &timeBuffer);
+			return buffer;
+		}
+
 		~Timer() {
 			timeElapsed();
 		}

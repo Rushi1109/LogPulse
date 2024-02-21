@@ -33,3 +33,8 @@
 21/02/24 17:10:13 : [DefaultLogger] [Debug]: Fine! 
 21/02/24 17:10:13 : [DefaultLogger] [Info]: Info 21760 
 21/02/24 17:10:13 : [DefaultLogger] [Error]: Info 21760 535 avxc c 
+21/02/24 17:34:25 : [DefaultLogger] [Warning]: Debug!! 
+21/02/24 17:34:25 : [DefaultLogger] [Critical]: Dead 
+21/02/24 17:34:25 : [DefaultLogger] [Debug]: Fine! 
+21/02/24 17:34:25 : [DefaultLogger] [Info]: Info 30328 
+21/02/24 17:34:25 : [DefaultLogger] [Error]: Info 30328 535 avxc c 

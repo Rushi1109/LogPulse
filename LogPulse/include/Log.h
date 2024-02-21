@@ -1,13 +1,15 @@
 #ifndef _log_h_
 #define _log_h_
 
-
 #include <string>
 #include <fstream>
 #include <iostream>
 #include <chrono>
 #include <ctime>
 #include <iomanip>
+
+#include "./Timer.h"
+using Util::Timer;
 using std::string;
 
 namespace LogPulse {
@@ -74,10 +76,10 @@ namespace LogPulse {
 			m_OutStream.open(m_Filename, std::ios::app);
 
 			if (m_OutStream) {
-				m_OutStream << std::put_time(&currentTime, "%e/%m/%y %T") << " : [" << m_Name << "] [" << getLevelString(level) << "]: " << message << " ";
+				m_OutStream << Timer::getCurrentTimeString() << " : [" << m_Name << "] [" << getLevelString(level) << "]: " << message << " ";
 			}
 		}
-		std::cout << std::put_time(&currentTime, "%e/%m/%y %T") << " : [" << m_Name << "] [" << getLevelStringColored(level) << "] : " << message << " ";
+		std::cout << Timer::getCurrentTimeString() << " : [" << m_Name << "] [" << getLevelStringColored(level) << "] : " << message << " ";
 		printArgs(std::forward<Args>(args)...);
 
 		if (m_OutStream.is_open()) {

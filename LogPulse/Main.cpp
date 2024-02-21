@@ -10,7 +10,7 @@ int main() {
 	Timer t1;
 
 	LogPulse::getDefaultLogger()->setLogLevel(Level::Debug);
-	//LogPulse::getDefaultLogger()->dumpToFile("./logs/default.log");
+	LogPulse::getDefaultLogger()->dumpToFile("./logs/default.log");
 	LogPulse::getDefaultLogger()->warn("Debug!!");
 	LogPulse::critical("Dead");
 	LogPulse::debug("Fine!");
@@ -20,7 +20,7 @@ int main() {
 	//std::this_thread::sleep_for(std::chrono::seconds{ 4 });
 
 	Log log("MyLogger");
-	//log.dumpToFile("./logs/dump.log");
+	log.dumpToFile("./logs/dump.log");
 	log.setLogLevel(Level::Debug);
 	log.error("Stop!");
 	log.warn("Carefull!");
