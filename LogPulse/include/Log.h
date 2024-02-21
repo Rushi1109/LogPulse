@@ -68,10 +68,6 @@ namespace LogPulse {
 
 	template<typename... Args>
 	void Log::log(const Level& level, const string& message, Args&&... args) const {
-		auto time_t = std::chrono::system_clock::to_time_t(std::chrono::system_clock::now());
-		std::tm currentTime;
-		localtime_s(&currentTime, &time_t);
-
 		if (m_IsFileDumpOn) {
 			m_OutStream.open(m_Filename, std::ios::app);
 
