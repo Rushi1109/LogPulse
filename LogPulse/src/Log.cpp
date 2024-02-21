@@ -1,13 +1,5 @@
-// EMPTY FOR NOW
 #include "../include/Log.h"
 using LogPulse::Log;
-
-const string red("\033[0;31m");
-const string darkRed("\033[1;31m");
-const string yellow("\033[1;33m");
-const string cyan("\033[0;36m");
-const string magenta("\033[0;35m");
-const string reset("\033[0m");
 
 void Log::dumpToFile(const string& filename) {
 	m_IsFileDumpOn = true;
@@ -19,23 +11,23 @@ string Log::getLevelStringColored(const Level& level) {
 	
 	switch (level) {
 		case Level::Critical : 
-			strLevel = darkRed + "Critical" + reset;
+			strLevel = "\033[1;31mCritical\033[0m";
 			break;
 
 		case Level::Error:
-			strLevel = red + "Error" + reset;
+			strLevel = "\033[0;31mError\033[0m";
 			break;
 
 		case Level::Warning:
-			strLevel = magenta + "Warning" + reset;
+			strLevel = "\033[0;35mWarning\033[0m";
 			break;
 
 		case Level::Info:
-			strLevel = cyan + "Info" + reset;
+			strLevel = "\033[0;36mInfo\033[0m";
 			break;
 
 		case Level::Debug:
-			strLevel = yellow + "Debug" + reset;
+			strLevel = "\033[1;33mDebug\033[0m";
 			break;
 	}
 

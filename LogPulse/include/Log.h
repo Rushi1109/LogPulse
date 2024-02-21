@@ -70,7 +70,6 @@ namespace LogPulse {
 		std::tm currentTime;
 		localtime_s(&currentTime, &time_t);
 
-
 		if (m_IsFileDumpOn) {
 			m_OutStream.open(m_Filename, std::ios::app);
 

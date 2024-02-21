@@ -13,3 +13,23 @@
 20/02/24 21:25:25 : [DefaultLogger] [Debug]: Fine! 
 20/02/24 21:25:25 : [DefaultLogger] [Info]: Info 26388 
 20/02/24 21:25:25 : [DefaultLogger] [Error]: Info 26388 535 avxc c 
+21/02/24 10:51:14 : [DefaultLogger] [Warning]: Debug!! 
+21/02/24 10:51:14 : [DefaultLogger] [Critical]: Dead 
+21/02/24 10:51:14 : [DefaultLogger] [Debug]: Fine! 
+21/02/24 10:51:14 : [DefaultLogger] [Info]: Info 29564 
+21/02/24 10:51:14 : [DefaultLogger] [Error]: Info 29564 535 avxc c 
+21/02/24 16:54:56 : [DefaultLogger] [Warning]: Debug!! 
+21/02/24 16:54:56 : [DefaultLogger] [Critical]: Dead 
+21/02/24 16:54:56 : [DefaultLogger] [Debug]: Fine! 
+21/02/24 16:54:56 : [DefaultLogger] [Info]: Info 14008 
+21/02/24 16:54:56 : [DefaultLogger] [Error]: Info 14008 535 avxc c 
+21/02/24 17:10:09 : [DefaultLogger] [Warning]: Debug!! 
+21/02/24 17:10:09 : [DefaultLogger] [Critical]: Dead 
+21/02/24 17:10:09 : [DefaultLogger] [Debug]: Fine! 
+21/02/24 17:10:09 : [DefaultLogger] [Info]: Info 11464 
+21/02/24 17:10:09 : [DefaultLogger] [Error]: Info 11464 535 avxc c 
+21/02/24 17:10:13 : [DefaultLogger] [Warning]: Debug!! 
+21/02/24 17:10:13 : [DefaultLogger] [Critical]: Dead 
+21/02/24 17:10:13 : [DefaultLogger] [Debug]: Fine! 
+21/02/24 17:10:13 : [DefaultLogger] [Info]: Info 21760 
+21/02/24 17:10:13 : [DefaultLogger] [Error]: Info 21760 535 avxc c 

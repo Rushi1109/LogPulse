@@ -16,3 +16,33 @@
 20/02/24 21:25:25 : [MyLogger] [Debug]: Fine! 
 20/02/24 21:25:25 : [MyLogger] [Info]: Info 26388 
 20/02/24 21:25:25 : [MyLogger] [Info]: Info 26388 535 avxc c 
+21/02/24 10:51:14 : [MyLogger] [Error]: Stop! 
+21/02/24 10:51:14 : [MyLogger] [Warning]: Carefull! 
+21/02/24 10:51:14 : [MyLogger] [Critical]: Dead 
+21/02/24 10:51:14 : [MyLogger] [Debug]: Fine! 
+21/02/24 10:51:14 : [MyLogger] [Info]: Info 29564 
+21/02/24 10:51:14 : [MyLogger] [Info]: Info 29564 535 avxc c 
+21/02/24 16:54:56 : [MyLogger] [Error]: Stop! 
+21/02/24 16:54:56 : [MyLogger] [Warning]: Carefull! 
+21/02/24 16:54:56 : [MyLogger] [Critical]: Dead 
+21/02/24 16:54:56 : [MyLogger] [Debug]: Fine! 
+21/02/24 16:54:56 : [MyLogger] [Info]: Info 14008 
+21/02/24 16:54:56 : [MyLogger] [Info]: Info 14008 535 avxc c 
+21/02/24 17:09:33 : [MyLogger] [Error]: Stop! 
+21/02/24 17:09:33 : [MyLogger] [Warning]: Carefull! 
+21/02/24 17:09:33 : [MyLogger] [Critical]: Dead 
+21/02/24 17:09:33 : [MyLogger] [Debug]: Fine! 
+21/02/24 17:09:33 : [MyLogger] [Info]: Info 13444 
+21/02/24 17:09:33 : [MyLogger] [Info]: Info 13444 535 avxc c 
+21/02/24 17:10:09 : [MyLogger] [Error]: Stop! 
+21/02/24 17:10:09 : [MyLogger] [Warning]: Carefull! 
+21/02/24 17:10:09 : [MyLogger] [Critical]: Dead 
+21/02/24 17:10:09 : [MyLogger] [Debug]: Fine! 
+21/02/24 17:10:09 : [MyLogger] [Info]: Info 11464 
+21/02/24 17:10:09 : [MyLogger] [Info]: Info 11464 535 avxc c 
+21/02/24 17:10:13 : [MyLogger] [Error]: Stop! 
+21/02/24 17:10:13 : [MyLogger] [Warning]: Carefull! 
+21/02/24 17:10:13 : [MyLogger] [Critical]: Dead 
+21/02/24 17:10:13 : [MyLogger] [Debug]: Fine! 
+21/02/24 17:10:13 : [MyLogger] [Info]: Info 21760 
+21/02/24 17:10:13 : [MyLogger] [Info]: Info 21760 535 avxc c 
