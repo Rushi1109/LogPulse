@@ -2,7 +2,6 @@
 #define _registry_h_
 
 #include<iostream>
-
 #include "./Log.h"
 
 namespace LogPulse {

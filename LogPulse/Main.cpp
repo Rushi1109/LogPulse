@@ -3,9 +3,7 @@
 #include "./include/Timer.h"
 
 int main() {
-	using Util::Timer;
-	using LogPulse::Log;
-	using LogPulse::Level;
+	using Util::Timer, LogPulse::Log, LogPulse::Level;
 
 	Timer t1;
 

@@ -14,27 +14,27 @@ namespace LogPulse {
 	}
 
 	template<typename... Args>
-	void critical(const string& message, Args&&... args) {
+	void critical(const string_view& message, Args&&... args) {
 		Registry::instance().getDefaultLogger()->critical(message, args...);
 	}
 
 	template<typename... Args>
-	void error(const string& message, Args&&... args) {
+	void error(const string_view& message, Args&&... args) {
 		Registry::instance().getDefaultLogger()->error(message, args...);
 	}
 
 	template<typename... Args>
-	void warn(const string& message, Args&&... args) {
+	void warn(const string_view& message, Args&&... args) {
 		Registry::instance().getDefaultLogger()->warn(message, args...);
 	}
 
 	template<typename... Args>
-	void info(const string& message, Args&&... args) {
+	void info(const string_view& message, Args&&... args) {
 		Registry::instance().getDefaultLogger()->info(message, args...);
 	}
 
 	template<typename... Args>
-	void debug(const string& message, Args&&... args) {
+	void debug(const string_view& message, Args&&... args) {
 		Registry::instance().getDefaultLogger()->debug(message, args...);
 	}
 }

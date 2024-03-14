@@ -1,7 +1,7 @@
 #include "../include/Log.h"
 using LogPulse::Log;
 
-void Log::dumpToFile(const string& filename) {
+void Log::dumpToFile(const std::filesystem::path& filename) {
 	m_IsFileDumpOn = true;
 	m_Filename = filename;
 }
